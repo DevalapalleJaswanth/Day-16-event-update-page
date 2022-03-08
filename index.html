@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        border: 2px solid black;
+        padding: 10px;
+        width: 800px;
+      }
+      .outer-box {
+        border: 2px solid black;
+        padding: 10px;
+        width: 850px;
+      }
+      .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+      .inner-box {
+        border: 1px solid black;
+        width: 180px;
+        height: 180px;
+      }
+      .image-box {
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+      }
+      .column-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 20px;
+      }
+      .row-flex {
+        display: flex;
+        justify-content: space-evenly;
+        
+        gap: 12px;
+      }
+      .flex {
+        display: flex;
+        justify-content: space-evenly;
+        
+        gap: 12px;
+      }
+      .bold {
+        font-weight: 800;
+        font-size: 20px;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      @media (max-width: 600px) { 
+        .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+      }
+       }
+    </style>
+  </head>
+  <body>
+    <div class="vertical outer-box">
+      <div class="bold">Event 1</div>
+      <div>Number of available seats : 23</div>
+
+      <div class="box">
+        <div class="flex">
+          <div class="inner-box center">
+            <div class="image-box center">Image</div>
+          </div>
+          <div class="column-flex">
+            <div class="row-flex">
+              <div>Name:</div>
+              <input type="text" />
+            </div>
+            <div class="row-flex">
+              <div>Email:</div>
+              <input type="email" />
+            </div>
+            <div class="row-flex">
+              <div>Phone Number:</div>
+              <input type="text" />
+            </div>
+            <div class="row-flex">
+              <div>Number of seats:</div>
+              <input type="number" />
+            </div>
+            <div class="row-flex">
+              <div>Number of attendee:</div>
+              <input type="text" />
+            </div>
+            <div class="row-flex">
+              <button>Submit</button>
+              <button>cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
